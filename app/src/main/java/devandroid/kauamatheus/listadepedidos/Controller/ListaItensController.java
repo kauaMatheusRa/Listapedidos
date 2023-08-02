@@ -12,10 +12,10 @@ public class ListaItensController {
     public List getListaItens() {
         listaItens = new ArrayList<Item>();
 
-        listaItens.add(new Item("Sabão em pó", 25.50));
-        listaItens.add(new Item("Achocolatado", 9.90));
-        listaItens.add(new Item("Maça", 2.5,1));
-        listaItens.add(new Item("Ervilha", 6.49));
+        listaItens.add(new Item("Sabão em pó", 25.50,""));
+        listaItens.add(new Item("Achocolatado", 9.90,""));
+        listaItens.add(new Item("Maça", 2.5,""));
+        listaItens.add(new Item("Ervilha", 6.49,""));
 
         return listaItens;
     }

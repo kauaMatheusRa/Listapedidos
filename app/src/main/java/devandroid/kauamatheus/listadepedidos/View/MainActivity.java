@@ -43,11 +43,6 @@ public class MainActivity extends AppCompatActivity implements Interface.ClickRe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setaRecyclerView();
-
-        setaButtons();
-        listenersButtons();
-
         ListaItensController listacontroller = new ListaItensController();
 
         listacontroller = new ListaItensController();
@@ -64,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements Interface.ClickRe
         spinner.setAdapter(adapter);
 
         spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listacontroller.getListaItens()));
+
+        setaRecyclerView();
+
+        setaButtons();
+        listenersButtons();
 
     }
 
@@ -102,15 +102,13 @@ public class MainActivity extends AppCompatActivity implements Interface.ClickRe
             @Override
             public void onClick(View v) {
 
-                // Cria uma nova pessoa chamada Renan Teles
+
                 Item itens = new Item();
                 itens.setNome(editNome.getText().toString());
-                itens.setQntd(Integer.parseInt(editQuantidade.getText().toString()));
-//                itens.setNome(editNome.getText().toString());
-//                itens.setQntd(Integer.parseInt(editQuantidade.getText().toString()));
+//              itens.setNome(editNome.getText().toString());
+                itens.setQntd(editQuantidade.getText().toString());
 
-                //Adiciona a pessoa1 e avisa o adapter que o conteúdo
-                //da lista foi alterado
+
                 itemListas.add(itens);
                 adapter.notifyDataSetChanged();
 

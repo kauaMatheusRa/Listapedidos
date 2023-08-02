@@ -37,7 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerTesteViewHolde
         Item item = mList.get(i);
 
         viewHolder.viewNome.setText(item.getNome());
-        viewHolder.viewQntd.setText(item.ge);
+        viewHolder.viewQntd.setText(item.getQntd());
 
     }
 
@@ -56,8 +56,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerTesteViewHolde
             super(itemView);
 
             viewNome = (TextView) itemView.findViewById(R.id.TextViewNome);
+            viewQntd = (TextView) itemView.findViewById(R.id.textViewQnt);
 
-            //Setup the click listener
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

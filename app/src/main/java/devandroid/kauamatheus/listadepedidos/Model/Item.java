@@ -3,14 +3,18 @@ package devandroid.kauamatheus.listadepedidos.Model;
 public class Item {
 
     private String nome;
-    private int qntd;
+    private String qntd;
     private double preco;
 
     public Item(){
 
     }
+    public Item(String nome, String qntd){
+        this.nome = nome;
+        this.qntd = qntd;
+    }
 
-    public Item(String nome, double preco, int qntd) {
+    public Item(String nome, double preco, String qntd) {
         this.nome = nome;
         this.preco = preco;
         this.qntd = qntd;
@@ -29,11 +33,11 @@ public class Item {
         this.nome = nome;
     }
 
-    public int getQntd() {
+    public String getQntd() {
         return qntd;
     }
 
-    public void setQntd(int qntd) {
+    public void setQntd(String qntd) {
         this.qntd = qntd;
     }
 
@@ -47,6 +51,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return nome +": R$"+ preco + qntd;
+        return nome +": R$"+ preco +" " +qntd;
     }
 }
